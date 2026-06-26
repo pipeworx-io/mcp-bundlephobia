@@ -43,7 +43,7 @@ const tools: McpToolExport['tools'] = [
   },
   {
     name: 'similar',
-    description: 'Packages with similar functionality + their sizes (for migration planning).',
+    description: 'Return npm packages with similar functionality to the given package, each with their minified + gzipped bundle sizes, to aid migration or replacement decisions.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -55,7 +55,7 @@ const tools: McpToolExport['tools'] = [
   },
   {
     name: 'history',
-    description: 'Compare size across recent versions (fetches each version sequentially — slow for large lists).',
+    description: 'Fetch minified + gzipped bundle size for each of up to 5 specified versions of an npm package and return them side-by-side for size regression tracking.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -67,7 +67,7 @@ const tools: McpToolExport['tools'] = [
   },
   {
     name: 'recent_searches',
-    description: 'What other people have recently been measuring on bundlephobia.com.',
+    description: 'Return the list of npm packages most recently measured on bundlephobia.com, showing current community interest in bundle-size analysis.',
     inputSchema: { type: 'object', properties: {} },
   },
 ];
