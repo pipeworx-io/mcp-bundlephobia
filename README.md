@@ -1,17 +1,23 @@
-# mcp-bundlephobia
+# @pipeworx/bundlephobia
 
-Bundlephobia MCP — npm bundle-size analysis
+Bundlephobia MCP — bundle-size analysis for npm packages. Reports minified + gzipped size, tree-shakeability, dependency count, build time estimates. Keyless.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 965+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `size` | Bundle size analysis — minified + gzipped, tree-shakeability, dependencies, esm/cjs detection. |
-| `similar` | Return npm packages with similar functionality to the given package, each with their minified + gzipped bundle sizes, to aid migration or replacement decisions. |
-| `history` | Fetch minified + gzipped bundle size for each of up to 5 specified versions of an npm package and return them side-by-side for size regression tracking. |
-| `recent_searches` | Return the list of npm packages most recently measured on bundlephobia.com, showing current community interest in bundle-size analysis. |
+- `size(package, version?)` — bundle size for `package` (or `package@version`)
+- `similar(package, version?)` — packages with similar functionality + their sizes
+- `history(package, version?)` — size history across versions (heuristic: queries each version)
+- `recent_searches()` — what other people have been measuring
+
+## Notes
+
+Bundlephobia is rate-limited and sometimes slow on first request (it builds + measures the package on demand). Subsequent requests for the same `package@version` are cached.
+
+## Data source
+
+`https://bundlephobia.com/api/`
 
 ## Quick Start
 
@@ -27,7 +33,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 965+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -51,7 +57,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
