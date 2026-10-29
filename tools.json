@@ -1,0 +1,77 @@
+[
+  {
+    "name": "size",
+    "description": "Bundle size analysis — minified + gzipped, tree-shakeability, dependencies, esm/cjs detection.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "package": {
+          "type": "string",
+          "description": "npm package name (scoped allowed)"
+        },
+        "version": {
+          "type": "string",
+          "description": "Specific version (default latest)"
+        },
+        "record": {
+          "type": "boolean",
+          "description": "Record the lookup publicly (default true)"
+        }
+      },
+      "required": [
+        "package"
+      ]
+    }
+  },
+  {
+    "name": "similar",
+    "description": "Return npm packages with similar functionality to the given package, each with their minified + gzipped bundle sizes, to aid migration or replacement decisions.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "package": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "package"
+      ]
+    }
+  },
+  {
+    "name": "history",
+    "description": "Fetch minified + gzipped bundle size for each of up to 5 specified versions of an npm package and return them side-by-side for size regression tracking.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "package": {
+          "type": "string"
+        },
+        "versions": {
+          "type": "string",
+          "description": "Comma-sep version list (max 5 to avoid timeouts)"
+        }
+      },
+      "required": [
+        "package",
+        "versions"
+      ]
+    }
+  },
+  {
+    "name": "recent_searches",
+    "description": "Return the list of npm packages most recently measured on bundlephobia.com, showing current community interest in bundle-size analysis.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number",
+          "description": "Max entries to return (default 25)."
+        }
+      }
+    }
+  }
+]
