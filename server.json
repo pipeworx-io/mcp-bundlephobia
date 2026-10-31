@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/bundlephobia",
   "title": "Bundlephobia",
   "description": "Bundlephobia MCP — npm bundle-size analysis",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "websiteUrl": "https://pipeworx.io/packs/bundlephobia",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-bundlephobia",

@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-bundlephobia",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Bundlephobia MCP — npm bundle-size analysis",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "bundlephobia",
     "gatewaySlug": "bundlephobia",
-    "sourceHash": "v1-f5f440bcf5d1d2e259645b75e0979f3d9ef0bbeea6d27ccfa54ac56e02ea3c19",
-    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
+    "sourceHash": "v1-e35afed41862e8e2cf4bc223f13b43972449f01a7f37bd36c5260d4de0f8c099",
+    "sourceCommit": "547a3983b42dacf4389ca474860b0a1dee8e6053"
   }
 }
